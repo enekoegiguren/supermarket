@@ -8,7 +8,7 @@
 
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/presentation.png)
 
-# We combine [Prophet](https://facebook.github.io/prophet/) with XGBoost to try to forecasting and try to predict the future price
+# We combine [Prophet](https://facebook.github.io/prophet/) with XGBoost to forecasting and try to predict the future price
 
 <div align="left">
   
