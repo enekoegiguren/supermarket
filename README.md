@@ -254,3 +254,47 @@ hist = hist.set_index('ds')
   
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/test-train.png)
 </div>
+
+## Prophet returns the forecast as follows
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/prophet%20forecasting.png)
+</div>
+
+- We compare the forecast with the actuals:
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/comparing.png)
+</div>
+
+**We could say that there is a difference, but if we only look at the last 3 months, the difference is minimal.**
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/comparing%20nov-jan.png)
+</div>
+
+### Evaluate the model with Error metrics:
+
+<div align="left">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/error_metrics.png)
+</div>
+
+### Predict into the future:
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/future1.png)
+</div>
+
+## Using Prophet features for XGBoost:
+
+We use the residuals between the price and the predicted yhat from Prophet to train our model:
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/prophet-yhat.png)
+</div>
+
