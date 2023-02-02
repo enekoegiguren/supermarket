@@ -236,3 +236,21 @@ cat_año
 </div>
 
 It's much more clear the difference of the price between supermarkets. 
+
+# Our model:
+Due to the better classification of the categories we are going to work with the Mercadona supermarket, but we can use the code with any of the data selected.
+
+1) Test-train: the data is separated the 1st november of 2022.
+2) Prophet needs us to rename the columns 
+
+```
+#rename to use prophet
+hist = hist.rename({'insert_date': 'ds', 'price': 'y'}, axis='columns')
+
+hist = hist.set_index('ds')
+```
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/test-train.png)
+</div>
