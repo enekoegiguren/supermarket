@@ -8,7 +8,21 @@
 
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/presentation.png)
 
+# We combine [Prophet](https://facebook.github.io/prophet/) with XGBoost to try to forecasting and try to predict the future price
+
 <div align="left">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/prophet.png)
+
+</div>
+
+<div align="left">
+  
+[Prophet](https://facebook.github.io/prophet/) and XGBoost are two popular machine learning libraries for time series forecasting and gradient boosting respectively. We can combine these two libraries to build a powerful model for price prediction by using Prophet to first forecast the general trend of the time series, and then use XGBoost to capture any remaining patterns in the residuals (the difference between the actual and the forecasted values).
+
+* __It works best with time series that have strong seasonal effects and multiple seasons of historical data, so we probably have some issues with our data. The reason is that our data is stored only on a daily basis.__ 
+
+
   
 ## DATA: The data has been extracted from [DATA Market](https://datamarket.es/#productos-de-supermercados-dataset)
 
@@ -174,13 +188,6 @@ Since we are talking about small differences in prices (cents), this graph is mu
   
 </div>
 
-<div align="center">
-
-
-*Distribution of the data per supermarket*
-  
-</div>
-
 We are going to separate the dataframe by supermarkets:
 
 ```
@@ -189,3 +196,43 @@ df_dia = df1[df1.supermarket == 'dia-es']
 df_carrefour = df1[df1.supermarket == 'carrefour-es']
 ```
 
+## Evolution of the price for each category:
+
+```
+cat_año = pd.crosstab(aggfunc="mean",
+            index = df1.categoria,
+            columns = df1.year,
+            values = df1.price)
+
+cat_año['crecim1'] = cat_año['2022'] - cat_año['2021']
+cat_año['crecim2'] = cat_año['2023'] - cat_año['2022']
+cat_año['crecim_conjunto'] = cat_año['2023'] - cat_año['2021']
+
+cat_año = cat_año.sort_values(by='crecim_conjunto', ascending=False)
+cat_año
+
+```
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/evol_cat.png)
+</div>
+  
+  
+
+## Evolution of the price per supermarket:
+
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/evol-supermarket.png)
+</div>
+  
+* __We have calculated the difference between first and the last day of each month and the result is the next:__
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/evol_sup_2.png)
+</div>
+
+It's much more clear the difference of the price between supermarkets. 
