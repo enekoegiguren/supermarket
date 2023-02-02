@@ -4,7 +4,7 @@
 </div>
 
 # 🛒 Spanish supermarket price evolution analysis and prediction
-
+[![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=darkgreen)](https://www.python.org)
 
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/presentation.png)
 
@@ -306,4 +306,49 @@ We use the residuals between the price and the predicted yhat from Prophet to tr
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/finalresult.png)
 </div>
 
+*You can find the detailed code [here](https://github.com/enekoegiguren/supermarket/tree/main/notebooks)*
+
+# CONCLUSION:
+
+We have used XGBoost to predict the price of the products but we have a **small dataset** for that if we group by day.
+
+For small datasets, algorithms that are less complex and have fewer hyperparameters to tune tend to perform well and are easier to train. In this case, some good choices include:
+
+- Linear Regression
+- Logistic Regression
+- Decision Trees
+- Naive Bayes
+- k-Nearest Neighbors (k-NN)
+
+These algorithms are fast to train and can provide good results on small datasets. Additionally, these models are less likely to overfit the data compared to more complex models. However, it is always a good idea to experiment with different algorithms and carefully evaluate their performance using appropriate metrics to determine the best model for your use case.
+
+</div>
+
+--- 
+
+### <div align="center">📲 Contact:
+</a>  
+<div align="center">
+<a href="https://linkedin.com/in/enekoegiguren" target="_blank">
+<img src=https://img.shields.io/badge/linkedin-%231E77B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white alt=linkedin style="margin-bottom: 5px;" />
+</a>  
+</div>
+<div align="center">
+<a href="https://github.com/enekoegiguren" target="_blank">
+<img src=https://img.shields.io/badge/github-%2324292e.svg?&style=for-the-badge&logo=github&logoColor=white alt=github style="margin-bottom: 5px;" />
+</a>
+
+
+<br/>  
+
+![Profile views counter](https://komarev.com/ghpvc/?username=enekoegiguren&&style=flat-square)  
+  
+
+<br/>  
+
+
+<br />
+
+----
+<div align="center">Eneko Egiguren
 
