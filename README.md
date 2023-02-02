@@ -298,3 +298,12 @@ We use the residuals between the price and the predicted yhat from Prophet to tr
 ![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/prophet-yhat.png)
 </div>
 
+**Our last result is the next **
+
+
+<div align="center">
+  
+![alt text](https://github.com/enekoegiguren/supermarket/blob/main/images/finalresult.png)
+</div>
+
+
